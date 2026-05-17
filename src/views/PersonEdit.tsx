@@ -14,14 +14,18 @@ export default function PersonEdit() {
     return (
       <div>
         <p className="text-gray-600">Person not found</p>
-        <Link to="/">Back to list</Link>
+        <Link to="/" className="ui-link">
+          Back to list
+        </Link>
       </div>
     )
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to="/">&larr; Back</Link>
+      <Link to="/" className="ui-link">
+        &larr; Back
+      </Link>
 
       <div className="flex items-center gap-3">
         <UserAvatar
@@ -36,7 +40,7 @@ export default function PersonEdit() {
         <div className="flex flex-col gap-1">
           <label
             htmlFor="hours-input"
-            className={isInputFocused ? 'text-primary' : 'text-dark'}
+            className={['ui-label', isInputFocused ? 'text-primary' : 'text-dark'].join(' ')}
           >
             {person.name.toUpperCase()} IS
           </label>

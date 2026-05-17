@@ -12,7 +12,7 @@ export default function PeopleList() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1>People</h1>
+      <h1 className="ui-title">People</h1>
 
       <div className="flex flex-col gap-3">
         {peopleWithYears.map((person) => (
@@ -30,7 +30,9 @@ export default function PeopleList() {
         ))}
       </div>
 
-      <Link to="/settings">Settings</Link>
+      <Link to="/settings" className="ui-link">
+        Settings
+      </Link>
     </div>
   )
 }

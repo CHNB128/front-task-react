@@ -8,8 +8,14 @@
   --color-grey-light: #cfcadf;
 }
 
-@layer base {
-  h1 {
+@layer utilities {
+  .font-koulen {
+    font-family: 'Koulen', sans-serif;
+  }
+}
+
+@layer components {
+  .ui-title {
     font-family: 'Koulen', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
@@ -17,7 +23,7 @@
     color: var(--color-dark);
   }
 
-  label {
+  .ui-label {
     font-family: 'Koulen', sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -26,7 +32,7 @@
     color: var(--color-dark);
   }
 
-  a {
+  .ui-link {
     color: var(--color-primary);
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -34,13 +40,7 @@
     text-underline-offset: 2px;
   }
 
-  a:hover {
+  .ui-link:hover {
     text-decoration-line: underline;
-  }
-}
-
-@layer utilities {
-  .font-koulen {
-    font-family: 'Koulen', sans-serif;
   }
 }

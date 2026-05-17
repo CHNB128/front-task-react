@@ -10,14 +10,16 @@ export default function Settings() {
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to="/">&larr; Back</Link>
+      <Link to="/" className="ui-link">
+        &larr; Back
+      </Link>
 
-      <h1>Settings</h1>
+      <h1 className="ui-title">Settings</h1>
 
       <div className="flex flex-col gap-1">
         <label
           htmlFor="min-age-input"
-          className={isInputFocused ? 'text-primary' : 'text-dark'}
+          className={['ui-label', isInputFocused ? 'text-primary' : 'text-dark'].join(' ')}
         >
           MINIMUM AGE
         </label>
