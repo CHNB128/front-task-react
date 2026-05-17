@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { UserAvatar } from '@/components/UserAvatar'
 import { useStore } from '@/store'
 
 export default function PeopleList() {
@@ -11,31 +12,25 @@ export default function PeopleList() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-xl font-bold text-gray-700">People</h1>
+      <h1>People</h1>
 
       <div className="flex flex-col gap-3">
         {peopleWithYears.map((person) => (
           <Link
             key={person.id}
             to={`/person/${person.id}`}
-            className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-violet-500"
+            className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 no-underline hover:border-primary hover:no-underline"
           >
-            <img
-              src="/img.png"
-              alt={person.name}
-              className="w-10 h-10 rounded-full border-2 border-violet-500 object-cover"
-            />
+            <UserAvatar name={person.name} size="sm" />
             <div>
-              <div className="font-bold text-gray-700">{person.name}</div>
+              <div className="font-bold text-dark font-koulen">{person.name}</div>
               <div className="text-gray-600">{person.ageInYears} years old</div>
             </div>
           </Link>
         ))}
       </div>
 
-      <Link to="/settings" className="text-violet-600 hover:underline text-sm">
-        Settings
-      </Link>
+      <Link to="/settings">Settings</Link>
     </div>
   )
 }
