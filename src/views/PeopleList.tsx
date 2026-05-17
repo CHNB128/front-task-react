@@ -21,7 +21,7 @@ export default function PeopleList() {
             to={`/person/${person.id}`}
             className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 no-underline hover:border-primary hover:no-underline"
           >
-            <UserAvatar name={person.name} size="sm" />
+            <UserAvatar name={person.name} src={person.photoUrl} size="sm" />
             <div>
               <div className="font-bold text-dark font-koulen">{person.name}</div>
               <div className="text-gray-600">{person.ageInYears} years old</div>

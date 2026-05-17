@@ -26,6 +26,7 @@ export default function PersonEdit() {
       <div className="flex items-center gap-3">
         <UserAvatar
           name={person.name}
+          src={person.photoUrl}
           size="md"
           isActive={isInputFocused}
           activeBorderClassName="border-primary"
